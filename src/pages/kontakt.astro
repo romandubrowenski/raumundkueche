@@ -9,22 +9,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
   
-<script
-  type="application/ld+json"
-  set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "KitchenFurnitureStore",
-    name: "Raum & Küche",
-    url: "https://raumundkueche.de/kontakt",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Stresemannstraße 107",
-      postalCode: "10963",
-      addressLocality: "Berlin",
-      addressCountry: "DE",
-    },
-  })}
-></script>
+
 
   <div class="contact-page container">
 
@@ -62,9 +47,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   action="/danke/"
 >
   <input type="hidden" name="form-name" value="kontakt" />
-  <input type="hidden" name="redirect" value="/danke/" />
 
-  <!-- Honeypot (Spam-Schutz) -->
   <p class="hidden">
     <label>
       Nicht ausfüllen: <input name="bot-field" />
