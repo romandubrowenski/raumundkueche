@@ -63,6 +63,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <!-- Pflicht: Netlify erkennt so den Formnamen -->
   <input type="hidden" name="form-name" value="kontakt" />
 
+  <!-- Redirect nach dem Absenden -->
+<input type="hidden" name="redirect" value="/danke" />
+
   <!-- Honeypot (Spam-Schutz) -->
   <p class="hidden">
     <label>
