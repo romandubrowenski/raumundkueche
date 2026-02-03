@@ -9,21 +9,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
   
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "KitchenFurnitureStore",
-  "name": "Raum & Küche",
-  "url": "https://raumundkuche.de/kontakt",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stresemannstraße 107",
-    "postalCode": "10963",
-    "addressLocality": "Berlin",
-    "addressCountry": "DE"
-  }
-}
-</script>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "KitchenFurnitureStore",
+    name: "Raum & Küche",
+    url: "https://raumundkueche.de/kontakt",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Stresemannstraße 107",
+      postalCode: "10963",
+      addressLocality: "Berlin",
+      addressCountry: "DE",
+    },
+  })}
+></script>
 
   <div class="contact-page container">
 
@@ -60,8 +61,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   netlify-honeypot="bot-field"
   action="/danke/"
 >
-  <!-- Pflicht: Netlify erkennt so den Formnamen -->
   <input type="hidden" name="form-name" value="kontakt" />
+  <input type="hidden" name="redirect" value="/danke/" />
 
   <!-- Honeypot (Spam-Schutz) -->
   <p class="hidden">
@@ -126,8 +127,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </div>
 </form>
+
 </section>
-  
 
   <section class="contact-info">
     
