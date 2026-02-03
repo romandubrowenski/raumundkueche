@@ -1,6 +1,0 @@
-[[redirects]]
-  from = "/kontakt/"
-  to = "/danke/"
-  status = 303
-  conditions = {Role = ["*"]}
-  force = true
