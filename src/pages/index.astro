@@ -1,16 +1,223 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Raum & Küche | Küchenstudio Berlin – hochwertige Einbauküchen"
+  description="Planung und Umsetzung hochwertiger Einbauküchen in Berlin – mit Fokus auf italienische Manufakturen. Persönliche Beratung, klare Prozesse, präzise Umsetzung."
+>
+
+  <!-- HERO -->
+<section class="hero-full">
+  <!-- Bild -->
+  <div class="hero-full-image">
+    <img
+      src="/images/hero.jpg"
+      alt="Hochwertige italienische Einbauküche in Berlin"
+    />
+  </div>
+
+  <!-- Text Overlay -->
+  <div class="hero-full-content">
+    <div class="container">
+      <h1>Italienisches Küchendesign in Berlin.</h1>
+
+      <p class="hero-text">
+        Hochwertige Einbauküchen aus italienischer Produktion – präzise geplant,
+        individuell umgesetzt.
+      </p>
+
+      <a href="/kontakt" class="btn btn--lg">
+        Beratung anfragen
+      </a>
+
+      <p class="hero-note">
+        Persönliche Beratung, klare Prozesse und hochwertige Umsetzung – direkt
+        in unserem Studio in Berlin.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- WARUM -->
+  <section class="section section--alt">
+    <div class="container">
+    <h2>Warum Raum & Küche</h2>
+    <ul>
+      <li>Ausgewählte italienische Hersteller mit hohem Designanspruch</li>
+      <li>Individuelle Planung statt Standardlösungen</li>
+      <li>Persönliche Beratung im Studio in Berlin</li>
+      <li>Hochwertige Materialien und langlebige Qualität</li>
+    </ul>
+    </div>
+  </section>
+
+  <!-- HERSTELLER -->
+ <section class="section">
+<div class="container">
+  <div class="section-grid">
+    <div>
+      <h2>Ausgewählte Hersteller & Materialien</h2>
+
+      <p>
+        Wir arbeiten überwiegend mit ausgewählten italienischen Küchenherstellern,
+        die für Design, Präzision und hochwertige Materialien stehen.
+        Ergänzend setzen wir punktuell auf deutsche Hersteller,
+        wenn sie für das jeweilige Projekt die bessere Lösung bieten.
+      </p>
+
+      <p>
+        Entscheidend ist nicht das Herkunftsland,
+        sondern die Qualität, die zum Raum, zur Nutzung und zum Anspruch unserer Kunden passt.
+      </p>
+    </div>
+
+    <div class="section-media">
+      <img src="/images/material.jpg" alt="Materialien und Fronten hochwertiger Küchen" />
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- UNSERE ARBEITSWEISE -->
+<section class="section section--alt">
+  <div class="container"> 
+  <h2>Unsere Arbeitsweise</h2>
+
+  <ul>
+    <li>Individuelle Planung statt Standardkonfigurationen</li>
+    <li>Klare Beratung zu Materialien, Funktionen und Budget</li>
+    <li>Enge Abstimmung zwischen Küche, Raum und Architektur</li>
+    <li>Persönliche Begleitung vom ersten Gespräch bis zur Umsetzung</li>
+  </ul>
+  </div>
+</section>
+
+<!-- DIVIDER FOTO (Full Width + Text) -->
+<section class="divider-photo" aria-label="Zwischenabschnitt">
+  <img
+    src="/images/divider-1.jpg"
+    alt="Detail einer hochwertigen Küche"
+    loading="lazy"
+  />
+
+  <div class="divider-overlay">
+    <div class="divider-inner">
+      <h2 class="divider-title">Präzise geplant. Hochwertig umgesetzt.</h2>
+      <p class="divider-text">
+        Von der ersten Beratung bis zur Montage: klare Prozesse, klare Entscheidungen.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- LEISTUNGEN -->
+  <section class="section">
+    <div class="container"> 
+    <h2>Unsere Leistungen</h2>
+
+    <h3>Küche</h3>
+    <p>
+      Planung und Realisierung hochwertiger Einbauküchen –
+      abgestimmt auf Raum, Architektur und Nutzung.
+    </p>
+
+    <h3>Raum & Wohnen</h3>
+    <p>
+      Ganzheitliche Raumkonzepte für Wohnen, Stauraum
+      und angrenzende Bereiche – klar geplant und hochwertig umgesetzt.
+    </p>
+    </div>
+  </section>
+
+  <!-- CTA INLINE -->
+  <section class="section cta-inline">
+  <div class="container"> 
+  <p>
+    Sie planen eine neue Küche oder ein ganzheitliches Raumkonzept?
+    Wir begleiten Sie von der ersten Idee bis zur Umsetzung.
+  </p>
+  <p>
+    <a href="/kontakt" class="btn btn--outline">Jetzt unverbindlich anfragen</a>
+  </p>
+  </div>
+</section>
+
+  <!-- REFERENZEN -->
+ <section class="section">
+<div class="container">
+  <div class="section-grid section-grid--reverse">
+    <div>
+      <h2>Realisierte Projekte</h2>
+
+      <p>
+        Unsere Referenzen zeigen, wie Design, Funktion und handwerkliche Qualität
+        in konkreten Projekten zusammenkommen – von der Stadtwohnung
+        bis zum ganzheitlichen Raumkonzept.
+      </p>
+
+      <a href="/referenzen" class="btn btn--outline">Projekte ansehen</a>
+    </div>
+
+    <div class="section-media">
+      <img src="/images/projekt-preview.jpg" alt="Realisierte Küche in Berlin" />
+    </div>
+  </div>
+</div>
+</section>
+
+
+  <!-- MARKEN -->
+  <section class="section section--alt">
+    <div class="container">
+    <h2>Marken & Partner</h2>
+    <p>
+      Wir arbeiten mit ausgewählten Herstellern und Partnern,
+      die unseren Anspruch an Qualität und Design teilen.
+    </p>
+    <a href="/marken" class="btn">Unsere Marken</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--alt">
+    <div class="container">
+    <h2>Angebot anfragen</h2>
+    <p>
+      Sie planen eine neue Küche oder ein Raumkonzept?
+      Fordern Sie ein individuelles Angebot an.
+    </p>
+    <p>
+      Im Rahmen Ihrer Anfrage erhalten Sie eine kurze E-Mail-Reihe
+      mit Einblicken in Planung, Materialien und Ablauf.
+    </p>
+    <a href="/kontakt" class="btn btn--outline">Angebot anfragen</a>
+    </div>
+  </section>
+
+  <!-- CONVERSION --> 
+  <section class="conversion">
+    <div class="container">
+  <h2>Ihre Küche beginnt mit einem Gespräch</h2>
+
+  <p>
+    Jede Küche entsteht bei uns aus einer persönlichen Beratung.
+    Wenn Sie eine Anfrage stellen, melden wir uns bei Ihnen
+    und geben Ihnen zusätzlich per E-Mail Einblicke in unsere
+    Planungsansätze, Materialien und realisierte Projekte.
+  </p>
+
+  <p>
+    <strong>Kein Newsletter.</strong><br />
+    Nur relevante Inhalte zur Küchenplanung.
+  </p>
+
+  <p>
+    <a href="/kontakt" class="btn btn--xl btn--primary">Unverbindliche Anfrage stellen</a>
+  </p>
+    </div>
+  </section>
+
+
+  </BaseLayout>

@@ -1,0 +1,227 @@
+/* Layout */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* =========================
+   HEADER – Premium (größer, glasig, sauber aligned)
+   ========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  /* dunkel transparent statt schwarz */
+  background: rgba(12, 12, 12, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* macht die Leiste hoch genug + richtet alles sauber aus */
+.header-inner {
+  display: grid;
+  align-items: center;
+
+  /* 3 Zonen: links Logo, Mitte Nav, rechts CTA */
+  grid-template-columns: auto 1fr auto;
+
+  min-height: 86px;
+  padding: 14px 0;
+  gap: 24px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 48px;  /* Logo sichtbar größer */
+  width: auto;
+  display: block;
+}
+
+.nav-main {
+  justify-self: center; 
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 10px;
+}
+
+/* macht Links “zusammenhängend” statt verloren */
+.nav-main a {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.nav-main a:hover {
+  background: transparent;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* CTA rechts – optisch gleiches System wie Nav */
+.nav-secondary {
+  justify-self: end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Kontakt-Button in “Pill” Stil bringen, passend zum Nav */
+.nav-secondary .btn {
+  border-radius: 999px;
+  padding: 11px 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-secondary .btn:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255, 255, 255, 0.30);
+}
+
+/* Mobile: Links ausblenden statt chaotisch umbrechen */
+@media (max-width: 720px) {
+  .header-inner {
+    min-height: 76px;
+  }
+
+  .logo-img {
+    height: 42px;
+  }
+
+  .nav-main {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--c-border);
+  padding: 2.5rem 0;
+  font-size: 0.95rem;
+  color: var(--c-muted);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--c-text);
+}
+
+.footer-nav a:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   Divider Foto – Full Width + Text
+   ========================= */
+
+.divider-photo {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 18vw, 280px); /* <- ungefähr halb so hoch */
+  overflow: hidden;
+
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+
+  background: #111; /* Fallback, falls Bild nicht lädt */
+}
+
+.divider-photo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 35%;
+
+  display: block;
+  filter: saturate(0.95) contrast(1.05) brightness(0.98);
+}
+
+/* dunkler Verlauf für Lesbarkeit */
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.62) 0%,
+    rgba(0,0,0,0.35) 55%,
+    rgba(0,0,0,0.12) 100%
+  );
+}
+
+.divider-inner {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.divider-eyebrow {
+  margin: 0 0 0.5rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.divider-title {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  max-width: 26ch;
+}
+
+.divider-text {
+  margin: 0 0 1.1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 60ch;
+}
+
+.divider-cta {
+  display: inline-block;
+}

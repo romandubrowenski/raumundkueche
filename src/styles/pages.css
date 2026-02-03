@@ -1,0 +1,381 @@
+/* =========================
+   FULL WIDTH HERO (Premium)
+   ========================= */
+
+.hero-full {
+  position: relative;
+  width: 100%;
+  min-height: 78vh;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Hintergrundbild */
+.hero-full-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-full::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.30) 55%,
+    rgba(0,0,0,0.12) 100%
+  );
+}
+
+/* Textbereich */
+.hero-full-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6rem 0;
+}
+
+.hero-full h1 {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  max-width: 18ch;
+}
+
+.hero-full .hero-text {
+  color: rgba(255, 255, 255, 0.94); /* warmes Offwhite */
+  font-size: 1.25rem;
+  max-width: 60ch;
+  
+}
+
+.hero-full .hero-note {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 55ch;
+  margin-top: 1.25rem;
+}
+
+.hero-full .hero-text,
+.hero-full .hero-note {
+  text-shadow: 0 6px 18px rgba(0,0,0,0.38);
+}
+
+/* Button auf Hero */
+.hero-full .btn {
+  background: rgba(20, 20, 20, 0.55);
+  border: 1px solid rgba(255,255,255,0.22);
+
+  color: rgba(255,255,255,0.92);
+
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 500;
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-full .btn:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.35);
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .hero-full {
+    min-height: 68vh;
+  }
+
+  .hero-full-content {
+    padding: 4.5rem 0;
+  }
+
+  .hero-full h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+/* CTA INLINE */
+.cta-inline {
+  border-top: 1px solid var(--c-border);
+}
+
+.cta-inline p:last-child {
+  margin-bottom: 0;
+}
+
+/* CONVERSION */
+.conversion {
+  border-top: 1px solid var(--c-border);
+}
+
+/* =========================
+   Homepage Sections – Premium Rhythm
+   ========================= */
+
+.section {
+  padding: 90px 0;
+}
+
+/* Jede Section nach der ersten bekommt eine feine Trennlinie */
+.section + .section {
+  border-top: 1px solid var(--c-border);
+}
+
+/* Option: Alternierender Hintergrund */
+.section--alt {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Typo-Feinschliff innerhalb von Sections */
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.section p,
+.section li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+/* Listen etwas “aufgeräumter” */
+.section ul {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* =========================
+   Section Grid: Text + Bild
+   ========================= */
+
+.section-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .section-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
+  }
+}
+
+.section-media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  background: #f3f3f3;
+  min-height: 360px;
+}
+
+.section-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Reverse Layout ohne extra Markup */
+.section-grid--reverse {
+  direction: rtl;
+}
+.section-grid--reverse > * {
+  direction: ltr;
+}
+
+/* =========================
+   Kontaktseite – FINAL
+   ========================= */
+
+.contact-page {
+  max-width: 760px;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.contact-hero h1 {
+  margin-bottom: 1rem;
+}
+
+.contact-hero p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 62ch;
+  color: var(--c-muted);
+}
+
+.contact-info {
+  margin: 2.25rem 0;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--c-border);
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-info li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--c-text);
+}
+
+.contact-info li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--c-muted);
+}
+
+.contact-form {
+  margin: 2.25rem 0;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--c-border);
+}
+
+.contact-form h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .contact-info,
+  .contact-form {
+    margin: 1.75rem 0;
+    padding-top: 1.75rem;
+  }
+}
+
+/* =========================
+   Referenzen
+   ========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Luxus: 1 riesige Karte pro Zeile */
+  gap: 2.5rem;
+  margin-top: 2.25rem;
+}
+
+.project-card {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: #fff;
+  overflow: hidden;
+
+  min-height: 520px;
+
+  transition: 0.18s ease;
+}
+
+.project-card:hover {
+  border-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.project-card h3 {
+  margin-top: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-meta {
+  color: var(--c-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-media {
+  height: 460px;          /* deutlich größer */
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+.project-media {
+  padding: 10px;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* nichts wird abgeschnitten */
+  object-position: center;
+  display: block;
+  background: #f3f3f3;
+}
+
+.project-card:hover .project-media img {
+  transform: scale(1.03);
+}
+
+.project-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.hint {
+  margin-top: 1.25rem;
+  color: var(--c-muted);
+  max-width: 70ch;
+}
+
+@media (max-width: 1100px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Tablet & Mobile: 1 Spalte */
+  }
+
+  .project-media {
+    height: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-media {
+    height: 260px;
+  }
+}
+
+/* =========================
+   Danke
+   ========================= */
+
+.thanks-note {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--c-border);
+  max-width: 70ch;
+}
+
+.thanks-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.thanks-address {
+  margin-top: 2rem;
+  color: var(--c-muted);
+}

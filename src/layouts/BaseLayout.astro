@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+
+const { title, description } = Astro.props;
+const site = "https://raumundkuche.de";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+
+  <!-- Canonical -->
+  <link rel="canonical" href={new URL(Astro.url.pathname, site).toString()} />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Raum & Küche" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={new URL(Astro.url.pathname, site).toString()} />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content={`${site}/og.png`} />
+  <meta name="twitter:image" content={`${site}/og.png`} />
+
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <link rel="icon" href="/favicon.svg" />
+
+  <script defer src="https://cloud.umami.is/script.js" 
+  data-website-id="b5b90832-3c75-451a-9d32-65f849b66571">
+  </script>
+
+</head>
+
+
+    <body>
+      
+<header class="site-header">
+  <div class="container">
+    <nav class="nav header-inner">
+      <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Raum & Küche" class="logo-img" />
+      </a>
+
+      <ul class="nav-main">
+        <li><a href="/kueche">Küche</a></li>
+        <li><a href="/leistungen">Leistungen</a></li>
+        <li><a href="/referenzen">Referenzen</a></li>
+      </ul>
+
+      <ul class="nav-secondary">
+        <li><a href="/kontakt" class="btn btn--sm">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+        <main>
+            <slot />
+        </main>
+
+<footer>
+  <div class="container">
+    <p>© raum & küche · Stresemannstraße 107 · 10963 Berlin</p>
+
+    <nav class="footer-nav">
+      <a href="/raum">Raum / Wohnen</a>
+      <a href="/marken">Marken</a>
+      <a href="/partner">Partner</a>
+      <a href="/ueber-uns">Über uns</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutzerklärung</a>
+    </nav>
+  </div>
+</footer>
+
+    </body>
+</html>

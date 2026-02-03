@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Kontakt | Raum und Küche – Küchenstudio Berlin"
+  description="Anfrage für Küchen- und Raumkonzepte bei Raum & Küche in Berlin. Persönliche Beratung und individuelle Planung."
+>
+
+
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "KitchenFurnitureStore",
+  "name": "Raum & Küche",
+  "url": "https://raumundkuche.de/kontakt",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stresemannstraße 107",
+    "postalCode": "10963",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  }
+}
+</script>
+
+  <div class="contact-page container">
+
+  <section class="contact-hero">
+    
+    <h1>Ihre Anfrage bei Raum & Küche</h1>
+    <p>
+      Sie planen eine neue Küche oder ein individuelles Raumkonzept
+      und suchen eine persönliche, fundierte Beratung in Berlin?
+    </p>
+    
+  </section>
+
+  <section class="contact-info">
+    
+      <h2>Wann eine Anfrage sinnvoll ist</h2>
+    <ul>
+      <li>Sie planen eine hochwertige Einbauküche oder ein Raumkonzept</li>
+      <li>Sie wünschen individuelle Planung statt Standardlösungen</li>
+      <li>Sie legen Wert auf persönliche Beratung und klare Entscheidungen</li>
+    </ul>
+    
+  </section>
+
+  <section class="contact-form">
+    
+    <h2>Gespräch anfragen</h2>
+
+<form
+  class="form"
+  name="kontakt"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/danke"
+>
+  <!-- Pflicht: Netlify erkennt so den Formnamen -->
+  <input type="hidden" name="form-name" value="kontakt" />
+
+  <!-- Honeypot (Spam-Schutz) -->
+  <p class="hidden">
+    <label>
+      Nicht ausfüllen: <input name="bot-field" />
+    </label>
+  </p>
+
+  <div class="form-grid">
+
+    <div class="form-group full">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-Mail</label>
+      <input id="email" name="email" type="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Telefon (optional)</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" />
+    </div>
+
+    <div class="form-group">
+      <label for="project">Projektart</label>
+      <select id="project" name="project" required>
+        <option value="Küche">Küche</option>
+        <option value="Raum & Wohnen">Raum & Wohnen</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="budget">Budget-Rahmen (optional)</label>
+      <select id="budget" name="budget">
+        <option value="noch offen">noch offen</option>
+        <option value="bis 15.000 €">bis 15.000 €</option>
+        <option value="15.000 – 25.000 €">15.000 – 25.000 €</option>
+        <option value="25.000 – 40.000 €">25.000 – 40.000 €</option>
+        <option value="über 40.000 €">über 40.000 €</option>
+      </select>
+    </div>
+
+    <div class="form-group full">
+      <label for="message">Worum geht es in Ihrem Projekt?</label>
+      <textarea id="message" name="message" required></textarea>
+      <small>
+        z. B. Raumgröße, Umzug oder Küchenaustausch, zeitlicher Rahmen, besondere Wünsche
+      </small>
+    </div>
+
+  </div>
+
+  <div class="form-actions">
+    <button class="btn" type="submit">Gespräch anfragen</button>
+
+    <p class="form-note">
+      Im Rahmen Ihrer Anfrage erhalten Sie eine kurze E-Mail-Reihe mit
+      Einblicken in unsere Planung, Materialien und Arbeitsweise.
+      Kein Newsletter. Keine Werbung. Jederzeit abbestellbar.
+    </p>
+  </div>
+</form>
+</section>
+  
+
+  <section class="contact-info">
+    
+    <h2>Was passiert nach Ihrer Anfrage?</h2>
+    <p>
+      Wir melden uns persönlich bei Ihnen, klären erste Fragen und besprechen
+      die nächsten Schritte. Zusätzlich erhalten Sie per E-Mail ausgewählte
+      Einblicke in unsere Arbeitsweise und realisierte Projekte.
+    </p>
+    
+  </section>
+  
+
+
+  <section class="contact-info">
+    <h2>Raum & Küche – Berlin</h2>
+    <p>
+      Stresemannstraße 107<br />
+      10963 Berlin
+    </p>
+  </section>
+  
+</div>
+
+
+</BaseLayout>
